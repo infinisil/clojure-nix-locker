@@ -71,7 +71,7 @@ in {
         '';
       };
       homeDirectory = import ./createHome.nix {
-        inherit pkgs src lockfile mavenRepos;
+        inherit pkgs lockfile mavenRepos;
       };
       shellEnv = utils.shellEnv homeDirectory;
       wrapClojure = utils.wrapClojure homeDirectory;
